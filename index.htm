@@ -1,66 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucas Ramirez | Performance Tracker</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
-    <div class="dashboard">
-        <header class="main-header">
-            <div class="player-info">
-                <h1>LUCAS RAMIREZ <span class="number">#3</span></h1>
-                <p>OF | Tri-City Dust Devils (High-A)</p>
-            </div>
-            <div class="team-badge">TRI</div>
-        </header>
-
-        <section class="stats-grid">
-            <div class="stat-card" id="avg-card">
-                <label>Season AVG</label>
-                <div class="value">.266</div>
-                <div class="trend up">▲ .012</div>
-            </div>
-            <div class="stat-card">
-                <label>Home Runs</label>
-                <div class="value">3</div>
-                <p class="subtext">2025 MiLB Season</p>
-            </div>
-            <div class="stat-card highlight">
-                <label>WBC Impact</label>
-                <div class="value">2 HR</div>
-                <p class="subtext">vs Team USA (March 6)</p>
-            </div>
-        </section>
-
-        <main class="content-split">
-            <div class="chart-container card">
-                <h3>Performance Trend</h3>
-                <canvas id="performanceChart"></canvas>
-            </div>
-
-            <aside class="news-feed card">
-                <h3>Latest News</h3>
-                <ul id="news-list">
-                    <li>
-                        <span class="date">MAR 19</span>
-                        <p>Goes 2-for-2 with RBI triple against KC Royals.</p>
-                    </li>
-                    <li>
-                        <span class="date">MAR 07</span>
-                        <p>Nabs runner at 3rd with 91mph throw in WBC.</p>
-                    </li>
-                    <li>
-                        <span class="date">MAR 06</span>
-                        <p>Two-HR game against USA; homers off Jacob deGrom.</p>
-                    </li>
-                </ul>
-            </aside>
-        </main>
+<section class="log-section">
+    <div class="game-log card">
+        <h3>2026 Game Log (March Highlights)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Opponent</th>
+                    <th>Result</th>
+                    <th>AB</th>
+                    <th>H</th>
+                    <th>HR</th>
+                    <th>RBI</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mar 19</td>
+                    <td>KC Royals (ST)</td>
+                    <td>W 6-4</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>2</td>
+                </tr>
+                <tr class="highlight-row">
+                    <td>Mar 06</td>
+                    <td>Team USA (WBC)</td>
+                    <td>L 5-8</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Mar 04</td>
+                    <td>Exhibition</td>
+                    <td>W 3-1</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    <script src="script.js"></script>
-</body>
-</html>
+
+    <div class="popularity-card card">
+        <h3>Popularity Pulse</h3>
+        <div class="trends-container">
+            <div class="trend-metric">
+                <label>Search Volume Spike</label>
+                <div class="trend-value">+420%</div>
+                <span class="sub">Post-WBC vs USA</span>
+            </div>
+            <canvas id="popularityChart"></canvas>
+        </div>
+    </div>
+</section>
