@@ -1,26 +1,52 @@
-<div id="dashboard" class="bg-slate-900 text-white p-8 rounded-xl">
-  <header class="flex justify-between items-center mb-8">
-    <h1 class="text-3xl font-bold">Lucas Ramirez <span class="text-blue-400">#3</span></h1>
-    <div class="text-right">
-      <p class="text-sm opacity-70">Tri-City Dust Devils (High-A)</p>
-      <p class="text-xs text-green-400">Status: Active (2026 Season)</p>
-    </div>
-  </header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Ramirez | Performance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <div class="profile">
+                <h1>Lucas Ramirez <span class="number">#3</span></h1>
+                <p class="team">Tri-City Dust Devils | High-A</p>
+            </div>
+            <div class="status-badge">2026 Season Active</div>
+        </header>
 
-  <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
-    <div class="stat-card bg-slate-800 p-4 rounded-lg border-b-4 border-blue-500">
-      <p class="text-xs opacity-60">AVG</p>
-      <h2 id="avg" class="text-4xl font-black">.000</h2>
-    </div>
-    <div class="stat-card bg-slate-800 p-4 rounded-lg border-b-4 border-red-500">
-      <p class="text-xs opacity-60">HR</p>
-      <h2 id="hr" class="text-4xl font-black">0</h2>
-    </div>
-    </div>
+        <div class="stats-grid">
+            <div class="card">
+                <label>AVG</label>
+                <h2 id="avg">.000</h2>
+            </div>
+            <div class="card">
+                <label>Home Runs</label>
+                <h2 id="hr">0</h2>
+            </div>
+            <div class="card">
+                <label>RBIs</label>
+                <h2 id="rbi">0</h2>
+            </div>
+            <div class="card">
+                <label>OPS</label>
+                <h2 id="ops">.000</h2>
+            </div>
+            <div class="card highlight">
+                <label>EST. WAR</label>
+                <h2 id="war">0.0</h2>
+            </div>
+        </div>
 
-  <div class="bg-blue-900/20 p-4 rounded-lg overflow-hidden">
-    <p id="news-ticker" class="whitespace-nowrap italic text-blue-300">
-      Loading latest headlines...
-    </p>
-  </div>
-</div>
+        <section class="news-section">
+            <h3>Latest Headlines</h3>
+            <ul id="news-list">
+                <li>Loading latest scout reports...</li>
+            </ul>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
